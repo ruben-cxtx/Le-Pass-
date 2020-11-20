@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*--------------------------------------------------------------HEADER-------------------------------------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+}
+
+.logo {
+    font-family: 'Amatic SC', cursive;
+    cursor: pointer;
+    order: 3;
+    margin-left: auto;
+    color: #edf0f1;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+nav {
+    order: 1;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    font-size: 16px;
+}
+
+.nav__links li {
+    padding: 0px 20px;
+}
+
+.nav__links li:nth-child(1) {
+    padding: 0 20px 0 0;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #3EFFE3;
+}
+
+.cta {
+    order: 2;
+    margin-left: 20px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    color: #FF6BF1;
+}
+/*--------------------------------------------------------------Lepasse-------------------------------------------------------------*/
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+.lepasse{
+  background: black;
+  overflow: hidden;
+  font: 5vw/100vh "Amatic SC", cursive;
+  text-align: center;
+  color: transparent;
+  backface-visibility: hidden;
+}
+
+span {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 5s 3s both;
+}
+
+span:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@for $item from 1 through 21 {
+  span:nth-of-type(#{$item}){ 
+    animation-delay: #{(3 + ($item/10))}s; 
+  }
+} 
+/*--------------------------------------------------------------SECCION1-------------------------------------------------------------*/
+.Sc1cont{
+    display: inline-block;
+    width: 100%;
+    padding: 50px;
+    height: 700px;
+    background-color: #f5f5f5;
+}
+.Sc1txt{
+    float: left;
+    width: 45%;
+    height: auto;
+}
+.Sc1txt p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 25px;
+    color: rgb(49, 49, 49);
+}
+.Sc1txt h2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+    color: rgb(49, 49, 49);
+}
+.Sc1img{
+    float: right;
+    width: 45%;
+    height: auto;
+}
+.Sc1img img{
+    transition: 0.7s ease;
+}
+.Sc1img img:hover{
+    transform: translateY(-15px);
+}
+.Sc1cont button{
+    padding: 15px 30px;
+    color: #2b2b2b;
+    border: solid 2px  rgba(255, 255, 255, 0) ;
+    font-family: 'Amatic SC', cursive;
+    background-color: rgba(255, 255, 255, 0);
+    float: left;
+    width: 25%;
+    transition: 0.6s ease;
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+.Sc1cont button:hover{
+    background-color: rgb(255, 255, 255);
+    color: #525252;
+}
+/*--------------------------------------------------------------SECCION2-------------------------------------------------------------*/
+.Sc2cont{
+display: inline-block;
+background-color: rgb(255, 255, 255);
+padding: 50px;
+width: 100%;
+height: auto;
+}
+.Sc2cont h1{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: #252525;
+    font-size: 50px;
+}
+.Sc2img {
+    width: 100%;
+    height: auto;
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 360px;
+}
+
+.Sc2txt{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.Itxt{
+    float: left;
+    width: 40%;
+    height: auto;
+    border-left: 2px solid #ffa600;
+    padding: 6px 6px;
+    margin-top: 110px;
+}
+
+.Itxt h2{
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    color: rgb(44, 44, 44);
+}
+.Itxt p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    color: rgb(44, 44, 44);
+}
+.Dimg {
+float: right;
+width: 45%;
+height: auto;
+margin-top: 100px;
+}
+/*----------------------------------------------------------EXPERIENCE---------------------------------------------------------------*/
+.EXPERIENCE{
+    align-content: center;
+    width: 100%;
+    margin-left: 10px;
+}
+/*--------------------------------------------------------------SECCION3-------------------------------------------------------------*/
+.Sc3cont{
+    display: inline-block;
+    background-color: #f5f5f5;
+    padding: 50px;
+    width: 100%;
+    height: auto;
+    }
+.Sc3cont h1{
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: rgb(44, 44, 44);
+    }
+    .gallery{
+        width: 100%;
+        height: auto;
+        padding: 10px 50px;
+        background-color: #ffffff;
+    }
+    .gallery img{
+        transition: 0.8s ease;
+        padding: 15px;
+        width: 200px;
+    }
+    .gallery img:hover{
+        filter: grayscale(100);
+        transform: scale(1.1);
+    }
+    .gallery h1{
+        font-size: 60px;
+        width: 100%;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        color: rgb(44, 44, 44);
+        }
+/*--------------------------------------------------------------SECCION4-------------------------------------------------------------*/
+.Sc4cont h1{
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color: rgb(44, 44, 44);
+    }
+    .Sc4txt{
+        float: left;
+        width: 50%;
+        height: auto;
+    }
+    .Sc4txt2{
+        float: left;
+        width: 51%;
+        height: auto;
+    }
+    .Sc4txt2 p{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        margin-top: 25px;
+        color: rgb(49, 49, 49);
+    }
+    .Sc4txt2 h2{
+        font-family: 'Amatic SC', cursive;
+        font-size: 60px;
+        color: rgb(49, 49, 49);
+        margin-top: 100px;
+    }
+.Sc4cont{
+    display: inline-block;
+    background-color: #e2f9ff;
+    padding: 50px;
+    width: 100%;
+    height: auto;
+    }
+    .Sc4txt p{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        margin-top: 25px;
+        color: rgb(49, 49, 49);
+    }
+    .Sc4txt h2{
+        font-family: 'Amatic SC', cursive;
+        font-size: 60px;
+        color: rgb(49, 49, 49);
+    }
+    .Sc4img{
+        float: right;
+        width: 45%;
+        height: auto;
+        margin-top: 120px;
+    }
+    .Sc4img2{
+        float: right;
+        width: 35%;
+        height: auto;
+        margin-top: 120px;
+    }
+    /*---------------------------------------------------footer--------------------------------------------------------------------*/
+    footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        bottom: 0;
+        width: 100%;
+    }
+    .gallery1{
+        width: 100%;
+        height: auto;
+        padding: 20px 60px;
+        background-color: #ffffff;
+    }
+    .gallery1 img{
+        transition: 0.8s ease;
+        padding: 25px;
+        width: 300px;
+    }
+    .gallery1 img:hover{
+        filter: grayscale(100);
+        transform: scale(1.1);
+    }
+    .gallery1 h1{
+        font-size: 60px;
+        width: 100%;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        color: rgb(44, 44, 44);
+        }
